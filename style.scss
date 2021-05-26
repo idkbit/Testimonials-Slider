@@ -15,15 +15,18 @@ $grayishBlue: hsl(240, 18%, 77%);
 
 .wrapper {
   min-height: 100vh;
+  background: url("./images/pattern-curve.svg") left bottom/contain no-repeat;
 }
 
 .content {
   border: 1px solid #000;
   padding: 2rem;
+  // overflow: hidden;
 }
 
 .slider {
   position: relative;
+  margin-bottom: 0.5rem;
 
   .photo-container {
     padding: 2.5rem 2rem;
@@ -40,7 +43,7 @@ $grayishBlue: hsl(240, 18%, 77%);
     bottom: 1.5rem;
     left: 50%;
     transform: translateX(-50%);
-    box-shadow: -2rem 0.5rem 1rem rgba($grayishBlue, 0.5);
+    box-shadow: -1.5rem 1.3rem 2rem rgba($grayishBlue, 0.5);
     .btn {
       border: none;
       padding: 0.7rem;
@@ -65,4 +68,55 @@ $grayishBlue: hsl(240, 18%, 77%);
       box-shadow: 0 3px rgba($grayishBlue, 0.8);
     }
   }
+}
+
+.slider-text {
+  background: url("./images/pattern-quotes.svg") top center/20% no-repeat;
+  padding-top: 2rem;
+  color: $darkBlue;
+  text-align: center;
+  .text {
+    padding: 0 0.8rem;
+    font-weight: 500;
+  }
+  .name {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: 1rem;
+  }
+  .job {
+    color: $grayishBlue;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 4rem;
+  }
+}
+
+// slide
+
+.photo-container,
+.name-container,
+.job-container,
+.text-container {
+  position: relative;
+  width: 100%;
+}
+
+.photo,
+.job,
+.name,
+.text {
+  transition: 2s;
+}
+
+.photo-next,
+.job-next,
+.name-next,
+.text-next {
+  transform: translateX(100%);
+  position: absolute;
+  opacity: 1;
+}
+
+@media screen and (min-width: 42.1875em) {
 }
