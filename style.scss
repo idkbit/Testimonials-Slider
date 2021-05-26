@@ -49,6 +49,7 @@ $grayishBlue: hsl(240, 18%, 77%);
       margin-bottom: 1rem;
       font-weight: 300;
       font-size: 1.2rem;
+      line-height: 1.5;
     }
     h2 {
       font-size: 1rem;
@@ -104,9 +105,57 @@ $grayishBlue: hsl(240, 18%, 77%);
     box-shadow: 0 3px rgba(0, 0, 0, 0.2);
   }
 }
-.slider:not(.active) {
-  transform: translateX(100%);
-  display: none;
-}
-@media screen and (min-width: 42.1875em) {
+// .slider:not(.active) {
+//   transform: translateX(100%);
+//   display: none;
+// }
+@media screen and (min-width: 75em) {
+  .container {
+    background: url("./images/pattern-curve.svg") no-repeat left bottom/ 50%;
+    display: block;
+  }
+  .btns {
+    bottom: 2rem;
+    left: 9.5rem;
+    .prev-btn,
+    .next-btn {
+      padding: 1rem 1.2rem;
+    }
+  }
+  .slider {
+    margin: 0 auto;
+    transform: translate(-60%, 50%);
+    display: grid;
+    width: 100%;
+    grid-template-columns: 44rem 600px;
+    position: relative;
+    .slider-photo {
+      height: 100%;
+      transform: translate(-15%, -20%);
+      grid-column: 2/3;
+      position: relative;
+      z-index: 0;
+    }
+    .slider-text {
+      text-align: left;
+      grid-column: 1/2;
+      grid-row: 1/2;
+      margin: 2rem -2rem 2rem 5rem;
+      position: relative;
+      z-index: 3;
+      p {
+        background: url("./images/pattern-quotes.svg") no-repeat 20% top/20%;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+        display: inline-block;
+        margin-right: 0.5rem;
+      }
+      span {
+        font-size: 1.5rem;
+      }
+    }
+  }
 }
