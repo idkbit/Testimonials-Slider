@@ -1,0 +1,68 @@
+$darkBlue: hsl(240, 38%, 20%);
+$grayishBlue: hsl(240, 18%, 77%);
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "Inter", sans-serif;
+}
+
+.wrapper {
+  min-height: 100vh;
+}
+
+.content {
+  border: 1px solid #000;
+  padding: 2rem;
+}
+
+.slider {
+  position: relative;
+
+  .photo-container {
+    padding: 2.5rem 2rem;
+    background: url("./images/pattern-bg.svg") no-repeat 0 18px/100%;
+  }
+  .photo {
+    max-width: 100%;
+    border-radius: 5px;
+  }
+  .btns {
+    position: absolute;
+    background-color: transparent;
+    border-radius: 30px;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: -2rem 0.5rem 1rem rgba($grayishBlue, 0.5);
+    .btn {
+      border: none;
+      padding: 0.7rem;
+    }
+    .prev-btn {
+      border-radius: 30px 0 0 30px;
+      transition: 0.3s;
+      padding-right: 1.5em;
+      background-color: #fff;
+      transform: translateX(1px);
+    }
+    .next-btn {
+      border-radius: 0 30px 30px 0;
+      transition: 0.3s;
+      padding-left: 1.5rem;
+      background-color: #fff;
+      transform: translateX(-1px);
+    }
+    .prev-btn:active,
+    .next-btn:active {
+      transform: translateY(3px);
+      box-shadow: 0 3px rgba($grayishBlue, 0.8);
+    }
+  }
+}
