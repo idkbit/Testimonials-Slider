@@ -76,31 +76,29 @@ $grayishBlue: hsl(240, 18%, 77%);
   color: $darkBlue;
   text-align: center;
   .text {
-    padding: 0 0.8rem;
     font-weight: 500;
   }
   .name {
     font-size: 1rem;
     font-weight: 700;
-    margin-top: 1rem;
   }
   .job {
     color: $grayishBlue;
     font-size: 1rem;
     font-weight: 500;
-    margin-bottom: 4rem;
   }
+}
+.text-container {
+  padding: 0 0.8rem;
+}
+.name-container {
+  margin-top: 1rem;
+}
+.job-container {
+  margin-bottom: 4rem;
 }
 
 // slide
-
-.photo-container,
-.name-container,
-.job-container,
-.text-container {
-  position: relative;
-  width: 100%;
-}
 
 .photo,
 .job,
@@ -113,9 +111,8 @@ $grayishBlue: hsl(240, 18%, 77%);
 .job-next,
 .name-next,
 .text-next {
-  transform: translateX(100%);
   position: absolute;
-  opacity: 1;
+  transform: translateX(-300%);
 }
 
 @media screen and (min-width: 42.1875em) {
