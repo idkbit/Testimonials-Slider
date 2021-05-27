@@ -144,7 +144,7 @@ $grayishBlue: hsl(240, 18%, 77%);
       grid-row: 1/2;
       margin: 2rem -2rem 2rem 5rem;
       position: relative;
-      z-index: 3;
+      border-bottom-right-radius: 70%;
       p {
         background: url("./images/pattern-quotes.svg") no-repeat 20% top/20%;
         font-size: 2rem;
